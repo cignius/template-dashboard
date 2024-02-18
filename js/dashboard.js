@@ -1,5 +1,3 @@
-/* globals Chart:false, feather:false */
-
 (function () {
   'use strict'
 
@@ -7,18 +5,17 @@
 
   // Graphs
   var ctx = document.getElementById('myChart')
-  // eslint-disable-next-line no-unused-vars
   var myChart = new Chart(ctx, {
     type: 'line',
     data: {
       labels: [
-        'Sunday',
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday'
+        'kpi1',
+        'kpi2',
+        'kpi3',
+        'kpi4',
+        'kpi5',
+        'kpi6',
+        'kpi7'
       ],
       datasets: [{
         data: [
@@ -31,7 +28,7 @@
         ],
         lineTension: 0,
         backgroundColor: 'transparent',
-        borderColor: '#007bff',
+        borderColor: '#b8c0c6',
         borderWidth: 2,
         pointRadius: 0,
         pointBackgroundColor: 'transparent'

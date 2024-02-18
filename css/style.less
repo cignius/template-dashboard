@@ -5,14 +5,17 @@
 
 @bg-color: #f4f7fa;
 @bg-color-side-bar: #232d49;
+@color-text: #939393;
 
 body {
     font-size: .875rem;
 }
+
 canvas {
     width: 100%;
 }
-main{
+
+main {
     background-color: @bg-color;
 }
 
@@ -20,6 +23,165 @@ main{
     width: 16px;
     height: 16px;
     vertical-align: text-bottom;
+}
+
+/*
+* Search
+*/
+.input-search {
+    border-radius: 30px 0 0 30px;
+    padding: 1em 2em;
+}
+
+.btn-search {
+    border-radius: 0px 30px 30px 0;
+    padding: 1em;
+
+    &:hover {
+        color: @color-text;
+    }
+
+    i {
+        font-size: 1.5em;
+        color: @color-text;
+    }
+}
+
+.btn-bell {
+    padding: 1em;
+    border-radius: 50%;
+    margin: 0 10px;
+    width: 60px;
+    height: 60px;
+
+    &:hover {
+        color: @color-text;
+    }
+
+    i {
+        font-size: 1.5em;
+        color: @color-text;
+    }
+}
+
+.btn-user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user {
+    min-width: 180px;
+    background: #ffffff;
+    padding: 10px 15px;
+    border-radius: 20px;
+
+    i {
+        color: @color-text;
+    }
+
+    .col-md-4 {
+        text-align: center;
+
+        .avatar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f2f2f2;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+    }
+
+    .col-md-6 {
+        p {
+            font-weight: bold;
+            margin: 0;
+            color: @color-text;
+        }
+        small{
+            color:@color-text;
+        }
+
+        line-height: 1.1;
+    }
+}
+
+
+/*
+Cards
+*/
+
+.card {
+    color: @color-text;
+    border-radius: 20px;
+    margin: 0 10px;
+
+    .card-icon {
+        min-width: 30%;
+
+        i {
+            font-size: 5em;
+        }
+    }
+
+    .card-footer {
+        width: 80%;
+        margin: 0 auto;
+        border-top: none;
+        border-radius: unset;
+        background: transparent;
+
+    }
+
+    &.oboard {
+        margin-left: 0;
+
+        .card-footer {
+            border-bottom: solid 5px #9aa5b4;
+
+        }
+    }
+
+    &.legdig {
+        .card-footer {
+            border-bottom: solid 5px #bcd1e2;
+
+        }
+    }
+
+    &.com {
+        .card-footer {
+            border-bottom: solid 5px #9aa5b4;
+
+        }
+    }
+
+    &.plan {
+        margin-right: 0;
+
+        .card-footer {
+            border-bottom: solid 5px #bcd1e2;
+
+        }
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+
+
+}
+
+/*
+Colores
+*/
+.color-gray {
+    color: @color-text;
+    font-weight: bold;
 }
 
 /*
@@ -94,6 +256,7 @@ main{
         background-color: rgba(0, 0, 0, .25);
         box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
     }
+
     .navbar-toggler {
         top: .25rem;
         right: 1rem;
@@ -109,9 +272,10 @@ main{
         color: #fff;
         background-color: rgba(255, 255, 255, .1);
         border-color: rgba(255, 255, 255, .1);
-        &:focus{
+
+        &:focus {
             border-color: transparent;
-        box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
         }
     }
 }
